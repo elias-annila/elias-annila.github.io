@@ -1,0 +1,19 @@
+Coaxial heli
+
+Yleiskuvaus
+-Tavoitteena opetella yksityiskohtaisten pienten hiilikuituosien valmistusta, alumiiniosien koneistamista, moottorien rakennetta ja toimintaa sekä helikoptierien aerodynamiikkaa.
+-Koaksiaaliroottori kiinteällä mastolla
+-Direct drive malli, jossa lavat suoraan kiinni matalan kv moottoreissa ilman vaihteistoa.
+-Ylemmässä roottorissa swashplate cyclic pitch control varten
+-Digitaalinen openipc videolinkki
+-Hover virta 3A, leijunta aika 1h, lentoaika rauhallisessa, mutta aktiivisessa lennossa videolinkin kanssa 45min.
+
+Hover points:
+	-Roottorin lavat: ohut AG03 profiili, 139mm lavan pituus. Rakenne balsaytimen ympärille laminoitu hiilikuitu, lyijylangalla painotettu etureuna. Valmistettu puristamalla 3d tulostettuun muottiin.
+	-Rotorhead: hiilikuidusta valmistettu roottorin pää ja lapojen pidikkeet. Roottorin pää valmistettu puristamallla hiilikuitua 3d tulostettuun muottiin ja saranat kiertämällä yhtenäinen yksittäinen hiilikuitunippu lavanpidikkeen muotoon metallitappien ympäri.
+	-Swashplate: kaksiakselisen nivelen ympärille valmistettu swashplate ilman kollektiivista pitch controllia. Valmistettu 17x23x4 laakerin ympärille. Pyörivä ulko-osa valmistettu yhtenäisestä hiilikuidusta kiertämällä 3d tulostetun ytimen ympärille. Paikallaan pysyvät gimball ja alaosa valmistettu suoraan 3d tulostamalla nylon muovista.
+	-Moottorit: Staattori ja roottorin flux ring ja magneetit otettu T-motor velox 2306 moottoreista. Staattorin käämit ja laminoitu teräsrunko on kiinnitetty sellaisenaan kiinteään mastoon. Roottoriin sorvattu alumiinitangosta uusi yläosa ja laakeripesät isommilla laakereilla, jotka mahdollistavat kiinteän 8mm hiilikuitumaston viennin moottorien lävitse.
+	-Runko: 8mm hiilikuituputki, läpivientien kohdalta lisälaminoinneilla vahvistettuna.
+	-Elektroniikan kotelot yms osat: 3d-tulostettua PA12 nylonia.
+	-Akkupakkaus valmistettu neljästä sarjaan kytketystä Molicell p30b 18650 kennosta. Koska akun antama hetkellinen maksimivirta on vain 40A, ja molemmat moottorit yhdessä pystyvät hetkellisesti vetämään tätä enemmän virtaa, on virtajärjestelmään lisätty 1000uF 35v kondensaattori tasaamaan virtapiikkejä.
+	

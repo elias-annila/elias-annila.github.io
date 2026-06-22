@@ -1,0 +1,1025 @@
+/*
+:root {
+  color-scheme: dark;
+  --color-bg-page: #071024;
+  --color-bg-page: #071024;
+  --color-bg-surface: #0f172a;
+  --color-bg-panel: var(--color-bg-surface);
+  --color-text-main: #ffffff;
+  --color-text-muted-1: #cbd5e1;
+  --color-text-muted-2: #d1d5db;
+  --color-text-muted-3: #94a3b8;
+  
+  color: var(--color-text-main);
+  background: #f7f7f7;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+  */
+
+ /* ==========================================
+   DEFAULT THEME: Neutral Dark
+   ========================================== */
+:root {
+  color-scheme: light;
+  --color-bg-page: #d8d8d8;
+  --color-bg-surface: #ffffff;
+  --color-text-main: #111827;
+  --color-text-muted-1: #374151;
+  --color-text-muted-2: #4b5563;
+  --color-text-muted-3: #6b7280;
+  
+  /* New Accent Variables */
+  --color-accent: #ececec;       
+  --color-accent-text: #7153a5
+  ;  
+  color: var(--color-text-main);
+  background: var(--color-bg-page);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--color-bg-page);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+button:focus {
+  font: inherit;
+}
+
+.container {
+  width: min(1600px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent-text);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.intro {
+  max-width: 760px;
+  margin: 0.8rem 0 0;
+  color: var(--color-text-muted-2);
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+}
+
+.landing-page {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background: var(--color-bg-page);
+  display: grid;
+  place-items: center;
+}
+
+.landing-layout {
+  width: min(1180px, 100%);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.landing-header {
+  background: color-mix(in srgb, var(--color-bg-surface) 94%, transparent);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: var(--color-text-main);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+}
+
+.landing-header h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 3vw, 4rem);
+}
+
+.landing-header p {
+  margin: 0;
+  color: var(--color-text-muted-1);
+  max-width: 42rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--color-bg-surface) 94%, transparent);
+  color: var(--color-text-main);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.22);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.project-card h2 {
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-text-muted-1);
+}
+
+.project-card.placeholder {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.cv-page {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background: var(--color-bg-page);
+}
+
+.cv-layout {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cv-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 250px);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.cv-hero-copy {
+  min-width: 0;
+}
+
+.cv-hero p {
+  margin: 0;
+  color: var(--color-text-muted-1);
+  max-width: 64rem;
+}
+.cv-home-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+  background:var(--color-bg-surface);
+  color: var(--color-accent-text);
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+.cv-home-link:hover,
+.cv-home-link:focus-visible {
+  background: color-mix(in srgb, var(--color-accent) 28%, transparent);
+  transform: translateY(-1px);
+}
+
+.cv-hero-portrait {
+  width: min(100%, 230px);
+  padding: 0.85rem;
+  float:right;
+}
+
+.cv-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cv-card {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-bg-surface) 94%, transparent);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.18);
+}
+
+.cv-section-header {
+  margin-bottom: 1.25rem;
+}
+
+.cv-section-header h2 {
+  margin: 0.15rem 0 0;
+  font-size: clamp(1.6rem, 2vw, 2.15rem);
+}
+
+.cv-skill-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.cv-skill-content {
+  min-width: 0;
+}
+
+.cv-carousel-card {
+  gap: 1rem;
+}
+
+.cv-carousel-card .carousel-slide video,
+.cv-carousel-card .carousel-slide img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width:auto  ;
+  border-radius: 1rem;
+}
+
+
+
+.cv-portrait-card {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-bg-panel) 36%, transparent);
+  border: 1px solid var(--color-accent-text);
+}
+
+.cv-portrait-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 0.85rem;
+}
+
+.cv-portrait-caption {
+  margin: 0.75rem 0 0;
+  color: var(--color-text-muted-3);
+  font-size: 0.95rem;
+}
+
+.cv-block + .cv-block {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-accent-text);
+}
+
+.cv-block h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.15rem;
+}
+
+.cv-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-text-muted-2);
+}
+
+.cv-list li {
+  margin-bottom: 0.65rem;
+}
+
+.cv-entry + .cv-entry {
+  margin-top: 1.25rem;
+}
+
+.cv-entry-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.cv-entry-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cv-entry-header span,
+.cv-entry-meta,
+.cv-note {
+  color: var(--color-text-muted-3);
+}
+
+.cv-entry-meta {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.cv-entry p {
+  margin: 0;
+  color: var(--color-text-muted-2);
+}
+
+.cv-note {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.placeholder-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+.image-panel {
+  /* CRITICAL: Establishes the coordinate system for your overlay buttons */
+  position: relative;    
+  
+  width: 100%; 
+  
+  /* FIX: Tells CSS Grid NOT to stretch this container vertically. 
+     The height will now collapse to match the image's exact pixel height. */
+  align-self: start;   /* Centers the image vertically on wide screens. Use 'start' if you prefer it top-aligned. */
+  
+  /* Reset flex properties from the previous step if any remain */
+  display: block;       
+}
+
+.hero-image {
+  display: block;
+  width: 100%;          /* Stays full width of the grid column */
+  height: auto;         /* Forces the correct natural aspect ratio height */
+  border-radius: 1rem;
+}
+.overview-card,
+.carousel-card,
+.detail-card {
+  border-radius: 1.25rem;
+  padding: 1.2rem;
+  background: color-mix(in srgb, var(--color-bg-surface) 94%, transparent);
+  
+  backdrop-filter: blur(12px);
+}
+
+.overview-card h2,
+.detail-card h3 {
+  margin-top: 0;
+}
+
+.carousel-card {
+  display: grid;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.carousel-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.carousel-controls {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.carousel-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-main);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.carousel-button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+    background: color-mix(in srgb, var(--color-bg-panel) 36%, transparent);
+
+}
+
+.carousel-track {
+  display: grid;
+  transition: transform 0.45s ease;
+  will-change: transform;
+  width:100%;
+  flex-wrap: wrap;
+  gap:1rem;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.carousel-slide {
+  margin: 0 0 1rem 0;
+  display: grid;
+  padding: 0;
+  min-width:240px;
+}
+
+.carousel-slide .video-wrapper,
+.carousel-slide img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0); 
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.carousel-card .carousel-slide .video-wrapper video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.carousel-card .carousel-slide .pie-chart {
+  display: block;
+  
+  max-height: 320px;
+  object-fit: cover;
+  }
+
+.carousel-card .carousel-slide .pie-container {
+  display: block;
+  
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 1rem;
+  }
+
+
+/* The background layer over the video */
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Reduced dimming slightly so it's less noticed */
+  background: rgba(0, 0, 0, 0.1); 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  
+  /* CRITICAL: Allows click events to pass right through to the video/slide */
+  pointer-events: none; 
+  border-radius: inherit;
+}
+
+/* The refined, less intrusive play button icon */
+.play-button-overlay::after {
+  content: '';
+  
+  /* SHRUNK SIZE: from 50px to 36px */
+  width: 50px;
+  height: 50px;
+  
+  /* MORE TRANSPARENT: changed fill to very transparent white */
+  background-color: rgba(255, 255, 255, 0.2); 
+  
+  /* Added a subtle white border to give it definition against light videos */
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  
+  /* REMOVED heavy shadow */
+  box-shadow: none; 
+  
+  /* SVG updated: changed fill='%23ffffff' (white) instead of black */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  
+  /* SHRUNK arrow size inside the circle */
+  background-size: 30px; 
+  background-position: calc(50% + 1.5px) center; /* Optically centers the smaller arrow */
+  
+  transition: all 0.2s ease;
+}
+
+/* Subtle hover effects when a user hovers over the slide */
+.carousel-slide:hover .play-button-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide:hover .play-button-overlay::after {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05); /* very slight scale for feedback */
+}
+
+.carousel-slide .video-wrapper:hover,
+.carousel-slide img:hover,
+.carousel-slide img:focus-visible {
+  transform: scale(1.01);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+.carousel-slide img:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.carousel-slide figcaption {
+  margin: 0;
+  color: var(--color-text-muted-1);
+  font-size: 0.95rem;
+}
+
+.carousel-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.45);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, width 0.2s ease;
+}
+
+.carousel-indicator:hover,
+.carousel-indicator:focus-visible {
+  background: var(color-accent);
+  transform: scale(1.08);
+}
+
+.carousel-indicator.is-active {
+  width: 1.75rem;
+  background: #93c5fd;
+}
+
+.overview-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.overview-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.overview-list li {
+  margin-bottom: 0.65rem;
+  color: var(--color-text-muted-2);
+}
+
+
+.detail-card {
+  color: var(--color-text-main);
+  min-height: 0;
+  overflow: auto;
+  max-height: calc(100vh - 6rem);
+}
+
+.detail-card h3 {
+  font-size: 1.25rem;
+}
+
+.detail-card p {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted-1);
+}
+
+.detail-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.detail-carousel-shell {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.detail-carousel-viewport {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-bg-panel) 50%, transparent);
+
+}
+
+.detail-carousel-track {
+  display: flex;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.detail-carousel-slide {
+  min-width: 100%;
+  margin: 0;
+}
+
+.detail-carousel-slide .detail-image {
+  width: 100%;
+  max-height: min(70vh, 760px);
+  object-fit: contain;
+  margin: 0;
+  background: color-mix(in srgb, var(--color-bg-panel) 20%, transparent);
+}
+
+.detail-carousel-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.detail-popup {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+    background: color-mix(in srgb, var(--color-bg-page) 94%, transparent);
+
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.detail-popup.hidden {
+  display: none;
+}
+
+.detail-popup-content {
+  position: relative;
+  width: min(1140px, 100%);
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+}
+
+.detail-close-button {
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-main);
+  font-size: 1.4rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.detail-close-button:hover,
+.detail-close-button:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.detail-image,
+.detail-video {
+  max-width: 100%;
+  max-height: 320px ;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  margin: 1rem 0 0;
+  display: inline-block;
+}
+
+.detail-video {
+  display: none;
+}
+
+.image-wrapper {
+  position: relative;
+}
+.hotspot {
+  position: absolute;
+  border: none;
+  /* Mixes the theme's accent color with transparency dynamically */
+  background: color-mix(in srgb, var(--color-bg-surface) 92%, transparent);
+  color: var(--color-accent-text);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Dynamic glowing shadow based on the active theme accent */
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--color-accent) 25%, transparent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 999px;
+}
+
+
+  .hotspot .hotspot-content {
+  display: none; /* Keeps it hidden until JS reads it */
+  }
+
+.hotspot:hover,
+.hotspot:focus-visible {
+  transform: scale(1.05);
+  /* Dynamically increases the shadow glow using the active theme's accent */
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+.hotspot:focus-visible {
+  /* Replaced the light blue (#93c5fd) with the theme's crisp accent color */
+  outline: 3px solid var(--color-accent);
+}
+
+.hotspot-index {
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  display: grid;
+  place-items: center;
+  /* Uses the main text color at 15% opacity so it's perfectly visible on BOTH light and dark themes */
+  background: color-mix(in srgb, var(--color-text-main) 15%, transparent);
+  border-radius: 999px;
+}
+.hotspot-name {
+  white-space: nowrap;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  display: none; /* Hidden by default, shown on medium+ screens via media query */
+}
+
+
+/* ==========================================
+   1. SMALL SCREENS (Mobile / Default)
+   Stack: Image -> Overview -> Carousel
+   ========================================== */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Define the layout like a text map */
+  grid-template-areas:
+    "image"
+    "overview"
+    "carousel";
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Assign each element to its named area mapping */
+.overview-card { grid-area: overview; }
+.carousel-card { grid-area: carousel; }
+.image-panel   { grid-area: image; }
+
+
+/* ==========================================
+   2. MEDIUM SCREENS (Tablets / Small Laptops)
+   Top Row: Overview (Left) | Image Panel (Right)
+   Bottom Row: Carousel spans full width
+   ========================================== */
+@media (min-width: 1000px) and (max-width: 1399px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    grid-template-areas:
+      "overview image"
+      "carousel carousel"; /* Carousel spans both columns */
+  }
+
+  .hotspot-index{
+      display:none;
+  }
+
+  .hotspot-name {
+    display: block;
+  }
+
+}
+
+
+/* ==========================================
+   3. WIDE SCREENS (Desktop / Original Layout)
+   Left Column: Overview & Carousel stacked
+   Right Column: Image Panel spanning the full height
+   ========================================== */
+@media (min-width: 1400px) {
+  
+  .cv-home-link{
+      position: fixed;
+  top:1rem;
+  left:1rem;
+
+  }
+   .hero-grid {
+    grid-template-columns: 0.8fr 1.2fr; 
+    grid-template-areas:
+      "overview image"
+      "carousel carousel"; /* Carousel spans both columns */
+    max-width: 1250px;
+
+    margin: 0 auto;
+  }
+
+
+  .hotspot-index{
+      display:none;
+  }
+
+  .hotspot-name {
+    display: block;
+  }
+
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .image-panel {
+    height: auto;
+    min-height: 240px;
+  }
+
+  .hero-image {
+    height: 100%;
+  }
+
+  .overview-card,
+  .carousel-card,
+  .detail-card {
+    padding: 1rem;
+  }
+
+
+  .hotspot {
+    padding: 0.65rem 0.8rem;
+  }
+
+  .detail-popup {
+    padding: 0.5rem;
+  }
+
+  .detail-popup-content {
+    width: 100%;
+    max-height: calc(100dvh - 1rem);
+  }
+
+  .detail-card {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .detail-carousel-controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .detail-carousel-slide .detail-image {
+    max-height: 52dvh;
+  }
+}
+
+@media (max-width: 720px) {
+ 
+
+  .carousel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carousel-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .carousel-indicators,
+  .detail-carousel-indicators {
+    justify-content: center;
+  }
+
+  .carousel-button {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .detail-close-button {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .cv-page {
+    padding: 1rem;
+  }
+
+  .cv-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-hero-portrait {
+    justify-self: start;
+    width: min(100%, 280px);
+  }
+
+  .cv-card,
+  .cv-hero {
+    padding: 1rem;
+  }
+
+
+  .cv-skill-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-portrait-card {
+    order: -1;
+  }
+
+  .cv-entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+
+
+
+
+
