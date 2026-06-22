@@ -221,7 +221,6 @@ button:focus {
 }
 
 .cv-hero-portrait {
-  width: min(100%, 230px);
   padding: 0.85rem;
   float:right;
 }
@@ -287,6 +286,7 @@ button:focus {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 0.85rem;
+  max-width:min(15vw, 230px);
 }
 
 .cv-portrait-caption {
@@ -987,7 +987,6 @@ button:focus {
 
   .cv-hero-portrait {
     justify-self: start;
-    width: min(100%, 280px);
   }
 
   .cv-card,
