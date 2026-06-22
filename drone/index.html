@@ -97,7 +97,7 @@
           <span class="hotspot-name">Rotor blades</span>
           
           <div class="hotspot-content">
-            <p>340mm rotor blades with a thin AG03 airfoil profile and low pitch angles. The upper rotor uses a 93 mm pitch and the lower rotor a 111 mm pitch. Overall these are  still probably slightly too aggressive and could be improved by reducing both pitch angles, but the pairing worked out well enough resulting in motor throttle levels being evenly matched at neutral yaw.</p>
+            <p>340mm rotor blades with a thin AG03 airfoil profile and low pitch angles. The upper rotor uses a 93 mm pitch and the lower rotor a 111 mm pitch. Overall these are  still probably a bit too aggressive and could be improved by reducing both pitch angles, but the pairing worked out well enough resulting in motor throttle levels being evenly matched at neutral yaw.</p>
             <p>The blades are made by laminating carbon-fiber cloth around a balsa core for the last three quarters of the blade in chordwise direction. The first quarter is made entirely from carbon fiber, and lead wire has been added to the leading edge to move the blade's center of mass ahead of the aerodynamic center. The blades connect to the hub through lead/lag and flap hinges.</p>
             
             <img src="blades.jpg" alt="Rotor blades overview">
@@ -125,9 +125,9 @@
           
           <div class="hotspot-content">
             <p>650 KV direct-drive motors. I took the laminated stator core from a T-Motor Velox 2306 v3 motor. I rewound the stator with 0.4 mm copper wire to increase the total copper content and maximize torque from the small stator as well as to lower the kv number to be more suitable for large rotors and 4s voltage used. </p>
-            <p>I machined the rotor bell from aluminium on a manual lathe and a 3-axis CNC mill, after which I fitted the original motor's flux ring and magnets using a press fit. The finished motor is dynamically balanced using a laser pointer and mirror.</p>
+            <p>I machined the rotor bell from aluminium on a manual lathe and a 3-axis CNC mill, after which I fitted the original motor's flux ring and magnets using a press fit. The finished motor is dynamically balanced using a laser pointer and mirror. Actual balancing was done by removing material with a dremel tool.</p>
 
-            <p>In the end the motors perform beautifully on the bench test at expected power levels, but in real world flight slight heating is observed, probably due to the required yaw control. A slightly bigger stator would have probably paid for it's weight in improved efficiency.</p>
+            <p>In the end the motors perform beautifully on the bench test at expected power levels, but in real world flight some heating is observed, possibly due to the required yaw control. A slightly bigger stator would have probably paid for it's weight in improved efficiency.</p>
             
             <img src="cyclicmotor.jpg" alt="Assembled cyclic motor setup">
             <img src="motorbell.jpg" alt="Custom machined aluminum motor bell">
@@ -178,7 +178,10 @@
             <span class="hotspot-index">7</span>
             <span class="hotspot-name">Further improvements</span>
             <div class="hotspot-content">
-<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='50'%3E%3C/svg%3E" alt="Transparent placeholder">              <p>The flight performance could be improved by some margin by reducing servo size to a more reasonable 9g servos from the 21g servos that were chosen simply because I already had them. The modular video setup would also allow quite easily swapping in a lighter video module, probably ditching the tilt mechanism. These modifications should drop the overall weight by around 50g-80g. Experimenting with different blade lengths and pitches would also likely yield improvements.</p>
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='50'%3E%3C/svg%3E" alt="Transparent placeholder">
+              <p>The flight performance could be improved by some margin by reducing servo size to a more reasonable 9g servos from the 21g servos that were chosen simply because I already had them. The modular video setup would also allow quite easily swapping in a lighter video module, probably ditching the tilt mechanism. These modifications should drop the overall weight by around 50g-80g. Experimenting with different blade lengths and pitches would also likely yield improvements.</p>
+
+              <p>In its current configuration the copter has quite strong roll-yaw coupling when turning at speed as well as a slight tendency to wobble at hover. I think experimenting with moving cg closer to the upper rotor with the swashplate would be worth experimenting to rectify these issues. An other solution could be rearranging the cyclic pitch control to the lower rotor.</p>
               
               <p>A better landing gear solution would also be needed for enabling landing on hard surfaces.</p>
               
