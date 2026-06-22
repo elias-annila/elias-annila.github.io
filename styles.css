@@ -471,6 +471,7 @@ button:focus {
 .carousel-slide {
   margin: 0 0 1rem 0;
   display: grid;
+  align-content: baseline;
   padding: 0;
   min-width:240px;
 }
