@@ -103,7 +103,7 @@ button:focus {
 }
 
 .landing-layout {
-  width: min(1180px, 100%);
+  width: min(1024px, 100%);
   display: grid;
   gap: 1.5rem;
 }
